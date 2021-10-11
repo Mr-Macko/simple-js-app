@@ -1,5 +1,7 @@
 alert("Hello World")
 
+let favoriteFood = "Pizza";
+document.write(favoriteFood);
 
 let size = 100;
 let doubleSize = size * 2;
