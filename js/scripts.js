@@ -7,6 +7,6 @@ let pokemonList = [
 
 // prints list (name and height) of all containing pokemon in dataset
 for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 0.6) document.write( '<p>' + pokemonList[i].name + ' (heigt: ' + pokemonList[i].height + ')' + ' - Wow! That is tall.' + '</p>');
-  else document.write('<p>' + pokemonList[i].name + ' (heigt: ' + pokemonList[i].height + ')' + '</p>');
+  if (pokemonList[i].height > 0.6) document.write('<p id=pokedex-style>' + pokemonList[i].name + ' (heigt: ' + pokemonList[i].height + ')' + ' - Wow! That is tall.' + '</p>');
+  else document.write('<p id=pokedex-style>' + pokemonList[i].name + ' (heigt: ' + pokemonList[i].height + ')' + '</p>');
 };
