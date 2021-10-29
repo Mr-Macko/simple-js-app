@@ -23,3 +23,33 @@ document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')')
 if (pokemon.height > 0.6) document.write(' - Wow! that is tall')
 else document.write('</p>');
 });
+
+// additional array with pokemon as IIFE
+let pokemonRepository = (function (){
+  let pokemonList = [
+    {
+      name: 'caterpie',
+      height: '0.3',
+      type: ['bug']
+    },
+    {
+      name: 'weedle',
+      height: '0.3',
+      type: ['bug', 'poison']
+    },
+    {
+      name: 'pidgey',
+      height: '0.3',
+      type: ['flying', 'normal']
+    },
+  ];
+
+  return {
+    getAll: function() {
+      return pokemonList;
+    },
+    add: function(pokemon) {
+      pokemonList.push(pokemon);
+    }
+  };
+})();
