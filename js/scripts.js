@@ -29,41 +29,48 @@ else document.write('</p>');
 
 
 // additional array with pokemon as IIFE
-let pokemonRepository = (function (){
+let pokemonRepository = (function () {
   let repository = [
     {
-      name: 'caterpie',
-      height: '0.3',
-      type: ['bug']
+      name: "caterpie",
+      height: "0.3",
+      types: ["bug"]
     },
     {
-      name: 'weedle',
-      height: '0.3',
-      type: ['bug', 'poison']
+      name: "weedle",
+      height: "0.3",
+      types: ["bug", "poison"]
     },
     {
-      name: 'pidgey',
-      height: '0.3',
-      type: ['flying', 'normal']
+      name: "pidgey",
+      height: "0.3",
+      types: ["flying", "normal"]
     },
   ];
-  }
+
   function add(pokemon) {
-    repository.push(pokemon)
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "types" in pokemon
+    ) {
+      repository.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
+    }
   }
   function getAll() {
     return repository;
   }
-  function addListItem(pokemon) {
-    let pokemonList = document.querySelector('.pokemon-list');
-    let listpokemon = document.createElement('li');
-    let button = document.createElement('button');
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add('button-class');
+    button.classList.add("button-class");
     listpokemon.appendChild(button);
-    pokemonList.appendChild(listItem);
-  function showDetails(pokemon){
-    console.log()
+    pokemonList.appendChild(listpokemon);
   }
   return {
     add: add,
