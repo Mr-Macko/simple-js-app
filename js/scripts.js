@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
   function add(pokemon) {
       repository.push(pokemon);
   }
-  
+
   function getAll() {
     return repository;
   }
@@ -63,9 +63,10 @@ let pokemonRepository = (function () {
     button.classList.add('button-class');
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    button.addEventListener('click', showDetails(pokemon))
   }
   function showDetails(pokemon){
-    console.log(pokemon.name)
+    console.log(pokemon)
   }
   return {
     add: add,
