@@ -62,6 +62,8 @@ let pokemonRepository = (function (){
     button.classList.add('button-class');
     listpokemon.appendChild(button);
     pokemonList.appendChild(listItem);
+  function showDetails(pokemon){
+    console.log()
   }
   return {
     add: add,
@@ -69,3 +71,8 @@ let pokemonRepository = (function (){
     addListItem: addListItem
   };
 })();
+
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
