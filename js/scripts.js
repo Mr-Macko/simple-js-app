@@ -1,5 +1,4 @@
 // array dataset with pokemon
-let pokemonList = [
 /* let pokemonList = [
   {
     name: 'bulbasaur',
@@ -16,7 +15,6 @@ let pokemonList = [
     height: '0.5',
     type: ['water']
   },
-];
 ]; */
 
 // UPDATED to forEach: prints list (name and height) of all containing pokemon in dataset. 
@@ -49,7 +47,6 @@ let pokemonRepository = (function (){
       type: ['flying', 'normal']
     },
   ];
-
   }
   function add(pokemon) {
     repository.push(pokemon)
