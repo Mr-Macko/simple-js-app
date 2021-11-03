@@ -32,7 +32,7 @@ else document.write('</p>');
 
 // additional array with pokemon as IIFE
 let pokemonRepository = (function (){
-  let pokemonList = [
+  let repository = [
     {
       name: 'caterpie',
       height: '0.3',
