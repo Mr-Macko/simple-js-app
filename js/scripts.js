@@ -67,12 +67,6 @@ let pokemonRepository = (function (){
     pokemonList.appendChild(listItem);
   }
   return {
-    getAll: function() {
-      return pokemonList;
-    },
-    add: function(pokemon) {
-      pokemonList.push(pokemon);
-    }
     add: add,
     getAll: getAll,
     addListItem: addListItem
