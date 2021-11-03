@@ -1,5 +1,6 @@
 // array dataset with pokemon
 let pokemonList = [
+/* let pokemonList = [
   {
     name: 'bulbasaur',
     height: '0.7',
@@ -16,6 +17,7 @@ let pokemonList = [
     type: ['water']
   },
 ];
+]; */
 
 // UPDATED to forEach: prints list (name and height) of all containing pokemon in dataset. 
 pokemonList.forEach(function(pokemon){
