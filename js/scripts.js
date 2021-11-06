@@ -1,33 +1,3 @@
-// array dataset with pokemon
-/* let pokemonList = [
-  {
-    name: 'bulbasaur',
-    height: '0.7',
-    type: ['grass', 'poison']
-  },
-  {
-    name: 'charmander',
-    height: '0.6',
-    type: ['fire']
-  },
-  {
-    name: 'squirtle',
-    height: '0.5',
-    type: ['water']
-  },
-]; */
-
-// UPDATED to forEach: prints list (name and height) of all containing pokemon in dataset. 
-// Commended this code snippet for nostalgic reasons.
-/* pokemonList.forEach(function(pokemon){
-document.write('<p id='pokedex-style'>' + pokemon.name + ' (height: ' + pokemon.height + ')')
-if (pokemon.height > 0.6) document.write(' - Wow! that is tall')
-else document.write('</p>');
-}); */
-
-
-
-
 // additional array with pokemon as IIFE
 let pokemonRepository = (function () {
   let repository = [
