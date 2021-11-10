@@ -1,7 +1,7 @@
 //  array with pokemon as IIFE
 let pokemonRepository = (function () {
   let repository = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
   function add(pokemon) {
       repository.push(pokemon);
@@ -60,64 +60,64 @@ function showDetails(pokemon) {
   });
 }
 
-  let modalContainer = document.querySelector('#modal-container');
+let modalContainer = document.querySelector('#modal-container');
 
-    function showModal(pokemon) {
-      modalContainer.innerHTML = '';
+  function showModal(pokemon) {
+    modalContainer.innerHTML = '';
 
-      let modal = document.createElement('div');
-      modal.classList.add('modal');
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
 
-      let closeButtonElement = document.createElement('button'); 
-      closeButtonElement.classList.add('modal-close');
-      closeButtonElement.innerText = 'X';
-      closeButtonElement.addEventListener('click', hideModal);
+    let closeButtonElement = document.createElement('button'); 
+    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.innerText = 'X';
+    closeButtonElement.addEventListener('click', hideModal);
 
-      let modalPokemonName = document.createElement('h1'); 
-      modalPokemonName.innerText = pokemon.name;
+    let modalPokemonName = document.createElement('h1'); 
+    modalPokemonName.innerText = pokemon.name;
 
-      let modalPokemonImg = document.createElement('img'); 
-      modalPokemonImg.src = pokemon.imageUrl;
+    let modalPokemonImg = document.createElement('img'); 
+    modalPokemonImg.src = pokemon.imageUrl;
 
-      let modalPokemonHeight = document.createElement('p');
-      modalPokemonHeight.innerText = 'Height: ' + pokemon.height;
+    let modalPokemonHeight = document.createElement('p');
+    modalPokemonHeight.innerText = 'Height: ' + pokemon.height;
 
-      let modalPokemonWeight = document.createElement('p');
-      modalPokemonWeight.innerText = 'Weight: ' + pokemon.weight;
+    let modalPokemonWeight = document.createElement('p');
+    modalPokemonWeight.innerText = 'Weight: ' + pokemon.weight;
 
-      modal.appendChild(closeButtonElement);
-      modal.appendChild(modalPokemonName);
-      modal.appendChild(modalPokemonImg);
-      modal.appendChild(modalPokemonHeight);
-      modal.appendChild(modalPokemonWeight);
+    modal.appendChild(closeButtonElement);
+    modal.appendChild(modalPokemonName);
+    modal.appendChild(modalPokemonImg);
+    modal.appendChild(modalPokemonHeight);
+    modal.appendChild(modalPokemonWeight);
 
-      pokemon.types.forEach(item => {
-            let modalPokemonTypes = document.createElement('p');
-            modalPokemonTypes.innerText = ('Type: ') + item.type.name;
-            modal.appendChild(modalPokemonTypes);
-        });
+    pokemon.types.forEach(item => {
+          let modalPokemonTypes = document.createElement('p');
+          modalPokemonTypes.innerText = ('Type: ') + item.type.name;
+          modal.appendChild(modalPokemonTypes);
+      });
 
-      modalContainer.appendChild(modal);
+    modalContainer.appendChild(modal);
 
-      modalContainer.classList.add('is-visible'); 
+    modalContainer.classList.add('is-visible'); 
+  }
+
+  function hideModal() {
+    modalContainer.classList.remove('is-visible'); 
+  }
+
+  window.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal();
     }
+  });
 
-    function hideModal() {
-      modalContainer.classList.remove('is-visible'); 
+  modalContainer.addEventListener('click', (e) => { 
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
     }
-
-    window.addEventListener('keydown', (e) => { 
-      if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-        hideModal();
-      }
-    });
-
-    modalContainer.addEventListener('click', (e) => { 
-      let target = e.target;
-      if (target === modalContainer) {
-        hideModal();
-      }
-    });
+  });
 
   return {
     add: add,
