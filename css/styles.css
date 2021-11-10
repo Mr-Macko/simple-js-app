@@ -1,3 +1,8 @@
+html, 
+body {
+  font-family: Arial, sans-serif;
+}
+
 #pokedex-style {
     background-color: lightblue;
     padding: 12px 16px;
@@ -23,3 +28,29 @@
     color: black;
     border: 2px solid #4caf50;
   }
+
+  .modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
+}
