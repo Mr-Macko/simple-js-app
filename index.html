@@ -8,11 +8,15 @@
         <title>Simple JS App</title>
   </head>
   <body>
-    <div id='modal-container'>
-      <div class='modal'>
-        <button class='modal-close'>Close</button>
-        <h1>Modal title</h1>
-        <p>Modal text</p>
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Pokedex</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+    </header>
     <!-- Bootstrap Modal -->
     <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -29,7 +33,6 @@
         </div>
       </div>
     </div>
-    <ul class='pokemon-list'></ul>
   <main class="container">
     <div class="row">
       <div class="col"></div>
