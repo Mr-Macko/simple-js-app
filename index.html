@@ -8,15 +8,17 @@
         <title>Simple JS App</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand">Pokedex</a>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+      <!-- Bootstrap Navbar -->
+      <nav class="navbar navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white">Pokedex</a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Search</button>
+          </form>
+        </div>
       </nav>
-    </header>
+      <ul class='list-group'></ul>
     <!-- Bootstrap Modal -->
     <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -33,18 +35,6 @@
         </div>
       </div>
     </div>
-  <main class="container">
-    <div class="row">
-      <div class="col"></div>
-        <div class="col-8">
-          <ul class='list-group'></ul>
-        </div>
-      <div class="col"></div>
-    </div>
-  </main>
-  <footer>
-
-  </footer>
     <script src="js/promise-pollyfil.js"></script>
     <script src="js/fetch-pollyfill.js"></script>
     <script src="js/scripts.js"></script>
