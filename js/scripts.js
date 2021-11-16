@@ -14,10 +14,9 @@ let pokemonRepository = (function () {
     let pokemonList = document.querySelector('.list-group');
     let listpokemon = document.createElement('li');
     let button = document.createElement('button');
-    listpokemon.classList.add('group-list-item')
+    listpokemon.classList.add('list-group-item')
     button.innerText = pokemon.name;
-    button.classList.add('btn');
-    button.classList.add('btn-primary');
+    button.classList.add('btn', 'btn-secondary','position-relative', 'border', 'position-relative');
     button.setAttribute("data-target", "#modal-container");
 		button.setAttribute("data-toggle", "modal");
     listpokemon.appendChild(button);
