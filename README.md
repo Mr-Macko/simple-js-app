@@ -1,5 +1,5 @@
 # Pokédex (Javascript App)
-This simple web application loads 150 Pokémon from an external API and displays them in an interactive list.
+This simple web application loads 151 Pokémon from an external API and displays them in an interactive list.
 
 ## Key Features
 -   Load data from an external API
