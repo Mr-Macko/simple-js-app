@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
     let listpokemon = document.createElement('li');
     let button = document.createElement('button');
     listpokemon.classList.add('list-group-item')
-    button.innerText = pokemon.name;
+    button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     button.classList.add('btn', 'btn-secondary','position-relative', 'border', 'position-relative');
     button.setAttribute("data-target", "#modal-container");
 		button.setAttribute("data-toggle", "modal");
@@ -53,7 +53,7 @@ let pokemonRepository = (function () {
    item.imageUrl = details.sprites.other['official-artwork']['front_default'];
    item.height = details.height;
    item.weight = details.weight;
-   item.types = details.types[0].type.name;
+   item.types = details.types[0].type.name.charAt(0).toUpperCase() + details.types[0].type.name.slice(1);
  }).catch(function (e) {
    console.error(e);
  });
@@ -74,7 +74,7 @@ function showModal (item) {
   modalTitle.empty();
   modalBody.empty();
 
-  let nameElement = $('<h1>' + item.name + '</h1>');
+  let nameElement = $('<h1>' + item.name.charAt(0).toUpperCase() + item.name.slice(1) + '</h1>');
   let imageElement = $('<img class="modal-img" style="width:50%">');
   imageElement.attr("src", item.imageUrl);
   let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
