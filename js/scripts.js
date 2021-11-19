@@ -10,7 +10,7 @@ let pokemonRepository = (function () {
   function getAll() {
     return repository;
   }
-  // structures the details in Pokemonlist
+  // structures the details in Pokemon list
   function addListItem(pokemon){
     let pokemonList = document.querySelector('.list-group');
     let listpokemon = document.createElement('li');
@@ -87,6 +87,22 @@ function showModal (item) {
   modalBody.append(weightElement);
   modalBody.append(typesElement);
 }
+
+
+    // Diplays pokemon based on the search bar input
+    let pokeSearchBar = document.querySelector('#filter');
+    pokeSearchBar.addEventListener('input', () => {
+        let pokeListItem = document.querySelectorAll('li');
+        let filter = pokeSearchBar.value.toUpperCase();
+
+        pokeListItem.forEach((listItem) => {
+            if (listItem.innerText.toUpperCase().indexOf(filter) > -1) {
+                listItem.style.display = '';
+            } else {
+                listItem.style.display = 'none';
+            }
+        });
+    });
 
   return {
     add: add,
