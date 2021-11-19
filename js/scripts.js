@@ -10,6 +10,7 @@ let pokemonRepository = (function () {
   function getAll() {
     return repository;
   }
+  // structures the details in Pokemonlist
   function addListItem(pokemon){
     let pokemonList = document.querySelector('.list-group');
     let listpokemon = document.createElement('li');
@@ -26,6 +27,7 @@ let pokemonRepository = (function () {
     })
   }
   
+  // loads pokemon API
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
